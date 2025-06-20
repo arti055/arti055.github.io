@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* GLOBAL */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #f2f2f2;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  a {
+    color: #66b2ff;
+    text-decoration: none;
   }
-  to {
-    transform: rotate(360deg);
+  
+  a:hover {
+    text-decoration: underline;
   }
-}
+  
+  /* CONTAINER */
+  .container {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #aaa;
+  }
+  
+  .socials {
+    margin-top: 1rem;
+  }
+  
+  .socials a {
+    margin: 0 1rem;
+    font-weight: 500;
+  }
+  
+  /* PROJECT GRID */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    justify-content: center;
+  }
+  
+  .project-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease;
+    min-height: 200px;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .project-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+  
+  .project-card h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.4rem;
+    font-weight: 600;
+  }
+  
+  .project-card p {
+    margin: 0 0 0.6rem;
+    color: #ccc;
+    line-height: 1.5;
+  }
+  
+  .details-link {
+    font-weight: 600;
+    color: #55aaff;
+  }
+  
+  .details-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* PROJECT PAGE */
+  .project-page, .project-full {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: #1a1a1a;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .project-full pre {
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    color: #dcdcdc;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* SECTION HEADINGS */
+  .project-step {
+    margin: 3rem 0 2rem;
+  }
+  
+  .project-step h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* STYLING SECTIONS */
+  .styled-bg {
+    background-color: #111;
+    color: #eee;
+  }
+  
+  .centered-section {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .project-subtitle {
+    font-weight: 400;
+    color: #ccc;
+    margin-top: -0.5rem;
+  }
+  
+  .executive-summary {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+  
+  /* IMAGES */
+  .centered-image {
+    display: block;
+    margin: 2rem auto;
+    max-width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  }
+  
+  .project-image {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+  }
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    color: #888;
+  }
+  
+  /* BACK BUTTON */
+  .back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-weight: bold;
+  }
+  
