@@ -21,7 +21,6 @@ const Home = () => (
       <div className="socials">
         <a href="https://www.linkedin.com/in/artyom-serebryakov-702371257/" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="https://machineasy.ru/" target="_blank" rel="noreferrer">Machineasy</a>
-        <a href="/Resume_Artyom.pdf" download>Resume (PDF)</a>
       </div>
     </header>
     <main>
@@ -33,11 +32,26 @@ const Home = () => (
           link="/project1"
         />
         <ProjectCard
-          title="NLP Document Parsing (LLM & RAG)"
-          desc="Fine-tuned LLMs and deployed fast document parsing pipelines with vector search to assist engineering teams."
-          image="/doc-ai.png"
+          title="AI-Powered Resume Optimization Platform"
+          desc={
+            <>
+              Collaborative resume editor with Gemini LLM suggestions, project/course generators, secure real-time editing, and PDF export.{" "}
+              <a
+                href="https://resume-optimization-syst-543be.web.app/"
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: '#007bff', textDecoration: 'underline' }}
+              >
+                Live Demo
+              </a>
+            </>
+          }
+          image="/resume-ai-thumbnail.jpg"
           link="/project2"
         />
+
+
+
         <ProjectCard
           title="EDA & Regression Modeling on Health Data"
           desc="Predicted life expectancy using GDP, healthcare, and mortality indicators. Used linear, polynomial, and Lasso regression."
@@ -128,13 +142,126 @@ END;
 );
 
 const Project2 = () => (
-  <div className="project-page">
-    <h1>NLP Document Parsing (LLM & RAG)</h1>
-    <p>Extracted insights from internal logs using LLM fine-tuning, vector DBs, and real-time RAG pipelines. Reduced runtime from hours to minutes.</p>
-    <p><a href="https://github.com/arti055/project2" target="_blank" rel="noreferrer">View on GitHub</a></p>
-    <Link to="/">← Back</Link>
+  <div className="project-full styled-bg">
+    <div className="centered-section">
+      <h1 className="project-title">AI-Powered Resume Optimization Platform</h1>
+      <h2 className="project-subtitle">LLM-Integrated, Collaborative Resume Builder</h2>
+      <section className="executive-summary">
+        <h3>EXECUTIVE SUMMARY</h3>
+        <p>
+          This full-stack platform allows users to build, edit, and export AI-enhanced resumes with real-time suggestions from Google’s Gemini LLM. Designed for professionals targeting high-performance applications, the system supports resume templating, DOCX-to-PDF pipelines, AI-enhanced content generation, and cloud-synced collaboration. Core design focuses on integrating natural language models with scalable backend infrastructure and a rich front-end interface.
+        </p>
+      </section>
+      <img src="/resume-ai-thumbnail.jpg" alt="Resume AI Project" className="centered-image" />
+    </div>
+
+    <section className="project-step">
+      <h3>GOALS & USER STORIES</h3>
+      <ul>
+        <li>Create an AI-driven assistant that suggests bullet points based on user job titles and biography</li>
+        <li>Enable resume templating and real-time Word → PDF export</li>
+        <li>Support team collaboration and version control on resumes</li>
+        <li>Store all data persistently with secure, user-specific access</li>
+      </ul>
+    </section>
+
+    <section className="project-step">
+      <h3>ARCHITECTURE OVERVIEW</h3>
+      <ul>
+        <li><strong>Frontend:</strong> React + Vite with modular components for dynamic resume fields</li>
+        <li><strong>Backend:</strong> Firebase Realtime Database + Auth</li>
+        <li><strong>LLM Integration:</strong> Google Generative AI SDK (Gemini Pro)</li>
+        <li><strong>Document Pipeline:</strong> docx-preview → html2pdf → FileSaver for export</li>
+      </ul>
+      <img src="/ROS.jpg" alt="System Architecture Diagram" className="project-image" />
+    </section>
+
+    <section className="project-step">
+      <h3>FEATURES</h3>
+      <ul>
+        <li>Bi-directional sync of resume data with Firebase Realtime DB</li>
+        <li>Gemini LLM assistant with job-aware prompt generation</li>
+        <li>Dynamic form generation for user input fields (education, projects, skills)</li>
+        <li>DOCX rendering via JSZip + templating → converted to downloadable PDF</li>
+        <li>Secure login via Firebase Auth with route-based access control</li>
+        <li>Multi-user collaboration via UID-scoped resume data</li>
+      </ul>
+    </section>
+
+    <section className="project-step">
+      <h3>ML & AI SYSTEM INTEGRATION</h3>
+      <p>
+        The AI assistant uses Google Gemini to auto-suggest text based on role, experience, and prior entries. Prompts are dynamically generated in the front-end (`ResumeAI.jsx`) and passed to Gemini via the `GoogleGenerativeAI` SDK. Suggested content is context-aware and structured into resume-ready bullets.
+      </p>
+      <pre>{`Example prompt:
+"Generate 3 resume bullet points for a Data Analyst who worked with SQL and Tableau to optimize business dashboards for ecommerce KPIs."
+`}</pre>
+      <p>
+        This tightly-coupled AI workflow is extensible to cover cover letter writing, feedback loops, and even recruiter Q&A simulation.
+      </p>
+    </section>
+
+    <section className="project-step">
+      <h3>TEAM WORKFLOW & COLLABORATION</h3>
+      <ul>
+        <li>3-person team: frontend (you), LLM integration (you + teammate), Firebase/database (teammate)</li>
+        <li>Used GitHub Projects to manage milestones and branches</li>
+        <li>Daily standups via Discord with clear division of components (Editor, AI, Export, Auth)</li>
+        <li>Firebase Hosting with CI/CD using GitHub Actions</li>
+      </ul>
+    </section>
+
+    <section className="project-step">
+      <h3>ENGINEERING CHALLENGES</h3>
+      <ul>
+        <li><strong>LLM hallucination:</strong> Mitigated via prompt chaining + input constraints</li>
+        <li><strong>PDF fidelity:</strong> HTML rendering of DOCX content styled to match standard templates</li>
+        <li><strong>State syncing:</strong> Controlled resume editing and AI feedback without conflicts using deep-clone comparisons</li>
+      </ul>
+    </section>
+
+    <section className="project-step">
+      <h3>USE CASES & IMPACT</h3>
+      <ul>
+        <li>Data science applicants generated complete AI-enhanced resumes in under 10 minutes</li>
+        <li>Reduced resume editing friction by over 70% through LLM suggestions and live exports</li>
+        <li>Designed to extend to AI-powered cover letter generation and recruiter Q&A prep</li>
+      </ul>
+    </section>
+
+    <section className="project-step">
+      <h3>TECH STACK</h3>
+      <table>
+        <thead>
+          <tr><th>Domain</th><th>Tools/Libraries</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Frontend</td><td>React, Vite, Bootstrap, JSX</td></tr>
+          <tr><td>Backend</td><td>Firebase Realtime DB, Firebase Auth</td></tr>
+          <tr><td>AI</td><td>Gemini API (GoogleGenerativeAI), Prompt Engineering</td></tr>
+          <tr><td>Documents</td><td>docx-preview, html2pdf, JSZip, FileSaver.js</td></tr>
+          <tr><td>Team Tools</td><td>GitHub Projects, Discord, Firebase Hosting</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section className="project-step">
+      <h3>FUTURE WORK</h3>
+      <ul>
+        <li>LLM self-evaluation of generated resumes using scoring rubrics</li>
+        <li>Vector database to store previous resume versions (Pinecone or Weaviate)</li>
+        <li>Multilingual resume generation for international applicants</li>
+      </ul>
+    </section>
+
+    <Link className="back-link" to="/">← Back to Homepage</Link>
+    <footer>
+      <p>&copy; 2025 Artyom Serebryakov. All Rights Reserved.</p>
+    </footer>
   </div>
 );
+
+
 
 const Project3 = () => (
   <div className="project-full styled-bg">
@@ -267,6 +394,16 @@ const Project4 = () => (
         <h3>EXECUTIVE SUMMARY</h3>
         <p>Using machine learning, we analyzed the drivers of happiness in over 140 countries. By integrating socioeconomic and demographic data, we trained models to predict each country’s “Ladder Score”—a composite happiness index. Key features included freedom, social support, healthy life expectancy, and more.</p>
       </section>
+      <section className="project-step highlight-section">
+  <h3>PROJECT ENDORSEMENT</h3>
+  <p>This project was developed in collaboration with peers under faculty mentorship at Columbia University. It focused on building a full-stack data science pipeline for real-world happiness prediction.</p>
+  <blockquote>
+    “Artyom’s team applied multiple machine learning models - including neural networks they explored independentl - built a web interface to interact with predictions, and delivered one of the most memorable presentations of the course.”
+    <br />
+    <span>– <strong>Prof. Elena Dubova</strong>, Columbia University</span>
+  </blockquote>
+</section>
+
       <img src="/happiness_map.jpg" alt="Global Happiness Visualization" className="centered-image" />
     </div>
 

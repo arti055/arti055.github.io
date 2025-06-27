@@ -188,4 +188,37 @@ body {
     margin-top: 2rem;
     font-weight: bold;
   }
+
+  .highlight-section {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  }
+  
+    /* Columbia */
+  .highlight-section h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .highlight-section p {
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  .highlight-section blockquote {
+    color: #eee;
+    border-left: 4px solid #00bcd4;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    font-style: italic;
+    font-size: 1.05rem;
+  }
+  
   
