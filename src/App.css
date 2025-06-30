@@ -221,4 +221,84 @@ body {
     font-size: 1.05rem;
   }
   
-  
+  /* RESPONSIVE STYLES */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  .centered-image {
+    max-width: 180px;
+  }
+
+  .project-image {
+    max-width: 100%;
+  }
+
+  .project-step {
+    padding: 0 1rem;
+  }
+
+  .project-full {
+    padding: 1.5rem;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+  .socials a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;}
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .project-step h3 {
+    font-size: 1.2rem;
+  }
+
+  .back-link {
+    font-size: 0.9rem;}
+}

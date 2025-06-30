@@ -26,7 +26,7 @@ const Home = () => (
     <main>
       <section className="projects-grid">
         <ProjectCard
-          title="Database Design & Analysis (SQL): AirBnB Database Implementation"
+          title="Database Design & Analysis (SQL): Airbnb-style Database Implementation"
           desc="Created ER diagrams, implemented a scalable SQL schema, and built query procedures for Airbnb-style platform."
           image="/airbnb-logo.png"
           link="/project1"
@@ -77,13 +77,13 @@ const Home = () => (
 const Project1 = () => (
   <div className="project-full styled-bg">
     <div className="centered-section">
-      <h1 className="project-title">Airbnb Database Project</h1>
-      <h2 className="project-subtitle">Database Creation and Management</h2>
+      <h1 className="project-title">Airbnb-style Database Project</h1>
+      <h2 className="project-subtitle">Relational Schema Design for Property Rental Platforms</h2>
       <section className="executive-summary">
         <h3>EXECUTIVE SUMMARY</h3>
-        <p>This project focuses on building a scalable and reliable database for Airbnb operations. It includes core data components like renters, bookings, payments, and reviews. We used SQL and Mockaroo for database design and data population, ensuring realistic simulations. The goal was to optimize Airbnb's backend operations while providing business insights.</p>
+        <p>This project simulates the backend of a property rental platform, inspired by systems like Airbnb. It includes core data components like renters, bookings, payments, and reviews. We used SQL and Mockaroo for database design and data population, ensuring realistic simulations. The objective was to architect a scalable backend that reflects the operational demands of large-scale rental platforms like Airbnb.</p>
       </section>
-      <img src="/airbnb-logo.png" alt="SQL Airbnb Project Logo" className="centered-image" />
+      <img src="/airbnb-logo.png" alt="SQL Rental Platform Project Logo" className="centered-image" />
     </div>
 
     <section className="project-step">
@@ -181,6 +181,7 @@ const Project2 = () => (
       <ul>
         <li>Bi-directional sync of resume data with Firebase Realtime DB</li>
         <li>Gemini LLM assistant with job-aware prompt generation</li>
+        <li>LLM self-evaluation of generated resumes using scoring rubrics</li>
         <li>Dynamic form generation for user input fields (education, projects, skills)</li>
         <li>DOCX rendering via JSZip + templating → converted to downloadable PDF</li>
         <li>Secure login via Firebase Auth with route-based access control</li>
@@ -194,7 +195,7 @@ const Project2 = () => (
         The AI assistant uses Google Gemini to auto-suggest text based on role, experience, and prior entries. Prompts are dynamically generated in the front-end (`ResumeAI.jsx`) and passed to Gemini via the `GoogleGenerativeAI` SDK. Suggested content is context-aware and structured into resume-ready bullets.
       </p>
       <pre>{`Example prompt:
-"Generate 3 resume bullet points for a Data Analyst who worked with SQL and Tableau to optimize business dashboards for ecommerce KPIs."
+"Refine my experience as a Data Analyst into 2–3 clear, professional resume bullet points, emphasizing my use of SQL and Tableau to improve ecommerce KPIs. Do not add information not provided."
 `}</pre>
       <p>
         This tightly-coupled AI workflow is extensible to cover cover letter writing, feedback loops, and even recruiter Q&A simulation.
@@ -204,7 +205,7 @@ const Project2 = () => (
     <section className="project-step">
       <h3>TEAM WORKFLOW & COLLABORATION</h3>
       <ul>
-        <li>3-person team: frontend (you), LLM integration (you + teammate), Firebase/database (teammate)</li>
+        <li>3-person team: LLM integration (me + teammate), Firebase/database (me+teammate), frontend (all of us),</li>
         <li>Used GitHub Projects to manage milestones and branches</li>
         <li>Daily standups via Discord with clear division of components (Editor, AI, Export, Auth)</li>
         <li>Firebase Hosting with CI/CD using GitHub Actions</li>
@@ -223,7 +224,7 @@ const Project2 = () => (
     <section className="project-step">
       <h3>USE CASES & IMPACT</h3>
       <ul>
-        <li>Data science applicants generated complete AI-enhanced resumes in under 10 minutes</li>
+        <li>Data science applicants generated complete AI-enhanced resumes in under 20 minutes</li>
         <li>Reduced resume editing friction by over 70% through LLM suggestions and live exports</li>
         <li>Designed to extend to AI-powered cover letter generation and recruiter Q&A prep</li>
       </ul>
@@ -245,22 +246,12 @@ const Project2 = () => (
       </table>
     </section>
 
-    <section className="project-step">
-      <h3>FUTURE WORK</h3>
-      <ul>
-        <li>LLM self-evaluation of generated resumes using scoring rubrics</li>
-        <li>Vector database to store previous resume versions (Pinecone or Weaviate)</li>
-        <li>Multilingual resume generation for international applicants</li>
-      </ul>
-    </section>
-
     <Link className="back-link" to="/">← Back to Homepage</Link>
     <footer>
       <p>&copy; 2025 Artyom Serebryakov. All Rights Reserved.</p>
     </footer>
   </div>
 );
-
 
 
 const Project3 = () => (
@@ -313,7 +304,6 @@ const Project3 = () => (
         <li>Grouped bar charts by race for nutrition and anxiety indicators</li>
       </ul>
       <img src="/inactivity-anxiety.jpg" alt="Obesity vs Depression Scatter" className="project-image" />
-      <img src="/nutrition_race_bar.png" alt="Nutrition by Race Bar Chart" className="project-image" />
     </section>
 
     <section className="project-step">
@@ -348,7 +338,7 @@ const Project3 = () => (
 
     <section className="project-step">
       <h3>TEAM COLLABORATION</h3>
-      <p>Used Discord for screen shares and Google Drive for versioned Jupyter Notebooks. 3 team members in total.</p>
+      <p>Used Discord for screen shares and Google Drive for versioned Jupyter Notebooks. 4 team members in total.</p>
     </section>
 
     <section className="project-step">
@@ -392,7 +382,7 @@ const Project4 = () => (
       <h2 className="project-subtitle">Machine Learning to Model National Well-Being</h2>
       <section className="executive-summary">
         <h3>EXECUTIVE SUMMARY</h3>
-        <p>Using machine learning, we analyzed the drivers of happiness in over 140 countries. By integrating socioeconomic and demographic data, we trained models to predict each country’s “Ladder Score”—a composite happiness index. Key features included freedom, social support, healthy life expectancy, and more.</p>
+        <p>Using machine learning, we analyzed the drivers of happiness in over 140 countries. By integrating socioeconomic and demographic data, we trained models to predict each country’s “Ladder Score” - a composite happiness index. Key features included freedom, social support, healthy life expectancy, and more.</p>
       </section>
       <section className="project-step highlight-section">
   <h3>PROJECT ENDORSEMENT</h3>
@@ -458,10 +448,6 @@ const Project4 = () => (
       </ul>
     </section>
 
-    <section className="project-step">
-      <h3>FUTURE WORK</h3>
-      <p>Given more time, we would expand across multiple years of data and explore advanced architectures like deeper neural networks. Feature selection automation and hyperparameter tuning would also be introduced to boost performance.</p>
-    </section>
 
     <section className="project-step">
       <h3>TECH STACK</h3>
